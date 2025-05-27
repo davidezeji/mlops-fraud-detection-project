@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/497226211061970214
+creation_time: 1748368405733
+experiment_id: '497226211061970214'
+last_update_time: 1748368405733
+lifecycle_stage: active
+name: Health Insurance Claim Anomaly Detection

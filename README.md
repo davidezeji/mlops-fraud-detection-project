@@ -15,7 +15,7 @@ The system implements an end-to-end machine learning pipeline for insurance clai
 
 ### System Architecture and Workflow
 
-![alt text](photos/Screenshot%202025-05-27%20at%201.32.07%20PM.png)
+![alt text](photos/Screenshot%202025-05-27%20at%201.32.07 PM.png)
 
 #### Step 1: Model Training and Registration
 The trained model is registered in MLflow for version control and tracking:

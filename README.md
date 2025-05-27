@@ -15,29 +15,29 @@ The system implements an end-to-end machine learning pipeline for insurance clai
 
 ### System Architecture and Workflow
 
-![System Architecture](photos/Screenshot%202025-05-27%20at%201.32.07%20PM.png)
+![alt text](photos/Screenshot%202025-05-27%20at%201.32.07%20PM.png)
 
 #### Step 1: Model Training and Registration
 The trained model is registered in MLflow for version control and tracking:
-![MLflow Experiments](photos/Experimerts.png)
-![Model Registration](photos/Screenshot%202025-05-27%20at%2012.54.52%20PM.png)
-![Model Details](photos/unequaled-crane-414.png)
+![alt text](photos/Experimerts.png)
+![alt text](photos/Screenshot%202025-05-27%20at%2012.54.52%20PM.png)
+![alt text](photos/unequaled-crane-414.png)
 
 #### Step 2: API Service Deployment
 BentoML creates a REST API service for model access:
-![BentoML Service](photos/Screenshot%202025-05-27%20at%201.08.06%20PM.png)
-![API Endpoints](photos/Screenshot%202025-05-27%20at%201.08.32%20PM.png)
+![alt text](photos/Screenshot%202025-05-27%20at%201.08.06%20PM.png)
+![alt text](photos/Screenshot%202025-05-27%20at%201.08.32%20PM.png)
 
 #### Step 3: Web Interface
 Users can submit claims through an intuitive web interface:
-![Upload Interface](photos/Upload%20CSV%20File.png)
+![alt text](photos/Upload%20CSV%20File.png)
 
 #### Step 4: Results and Decision Support
 The model provides clear predictions:
 - Score of 1: Claim is approved for processing
 - Score of -1: Claim requires further investigation
 
-![Prediction Results](photos/Prediction%20Results.png)
+![alt text](photos/Prediction%20Results.png)
 
 This automated system significantly improves efficiency by:
 - Reducing manual review time for straightforward claims
@@ -228,28 +228,3 @@ The application will be available at `http://localhost:5005`
 - `POST /predict`: Processes uploaded claims file
 - `GET /visualize`: Displays prediction distribution visualization
 
-## Project Summary/Photos
-
-### Architecture
-1. Users submit insurance claims to a web portal, 
-2. The machine learning model analyzes the claims and scores them as either good to go or if they need further investigation, 
-3. This either results in a cash payout or an insurance agent requiring further information. 
-4. The ML model is continuously trained via a data lake (ex: data stored in AWS S3).
-
-![alt text](photos/Screenshot%202025-05-27%20at%201.32.07 PM.png)
-
-Step 1: After the model is created/trained it is uploaded to MLflow and registered 
-![alt text](photos/Experimerts.png)
-![alt text](photos/Screenshot%202025-05-27%20at%2012.54.52 PM.png)
-![alt text](photos/unequaled-crane-414.png)
-
-Step 2: An API service is created for external users (via BentoML) to be able to access the ML model 
-![alt text](photos/Screenshot%202025-05-27%20at%201.08.06 PM.png)
-![alt text](photos/Screenshot%202025-05-27%20at%201.08.32 PM.png)
-
-Step 3: A user webpage is created, where users can submit insurance claims. Once the data file is uploaded to the webpage, it triggers the BentoML API and the model analyzes the data.
-![alt text](photos/Upload%20CSV%20File.png)
-
-Step 4: The ML model returns a prediction score of 1 or -1. The insurance claims that have a score of -1 are ones that need further investigation. A score of 1 means the claims are good to go and need no further investigation. ***This ultimately speeds up the job of insurance claim agents as they do not need to do this initial investigation process as the ML model handles it for them.***
-
-![alt text](photos/Prediction%20Results.png)

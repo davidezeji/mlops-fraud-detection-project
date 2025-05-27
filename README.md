@@ -25,8 +25,7 @@ The trained model is registered in MLflow for version control and tracking:
 
 #### Step 2: API Service Deployment
 BentoML creates a REST API service for model access:
-![alt text](photos/Screenshot%202025-05-27%20at%201.08.06%20PM.png)
-![alt text](photos/Screenshot%202025-05-27%20at%201.08.32%20PM.png)
+![alt text](photos/Screenshot%202025-05-27%20at%201.08.06 PM.png)
 
 #### Step 3: Web Interface
 Users can submit claims through an intuitive web interface:
